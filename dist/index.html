@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="container-all">
+        <div id="game-container"></div>
+        <div id="score-container"></div>
+    </div>
+
+    <script id="game-container-template" type="text/x-handlebars-template">
+        {{#each matrix as |item i|}}
+        <div class="row {{i}}">
+            {{#each item as |spot h|}}
+            <span class="spot {{h}}">{{spot}}</span>
+            {{/each}}
+        </div>
+        {{/each}}
+    </script>
+
+    <script id="score-container-template" type="text/x-handlebars-template">
+        <div class="player">Player 1
+            <span class="player-score">Score: {{player1}}</span>
+        </div>
+        <div class="player">Player 2
+            <span class="player-score">Score: {{player2}}</span>
+        </div>
+        </script>
+
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="matrix.js"></script>
+    <script src="goldrush.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

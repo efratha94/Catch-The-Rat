@@ -1,0 +1,62 @@
+// const Matrix = require("./matrix")
+
+class GoldMatrix extends Matrix {
+    constructor(numRows, numColumns) {
+        super(numRows, numColumns)
+        this.scores = {player1: 0, player2 :0}
+        
+        
+    }
+
+    movePlayer(player, direction) {
+        const currentColumn = this.findCoordinate(player).x
+        const currentRow = this.findCoordinate(player).y
+        // console.log(currentPosition)
+        let beforeValue
+        switch (direction) {
+            case "up":
+                beforeValue = this.alter(currentRow - 1, currentColumn, player, this.matrix)
+                this.alter(currentRow - 1, currentColumn, player, this.matrix)
+                this.alter(currentRow, currentColumn, ".", this.matrix)
+                break;
+            case "down":
+                beforeValue = this.alter(currentRow + 1, currentColumn, player, this.matrix)
+                this.alter(currentRow + 1, currentColumn, player, this.matrix)
+                this.alter(currentRow, currentColumn, ".", this.matrix)
+                break;
+            case "left":
+                beforeValue = this.alter(currentRow , currentColumn - 1, player, this.matrix)
+                this.alter(currentRow, currentColumn - 1, player, this.matrix)
+                this.alter(currentRow, currentColumn, ".", this.matrix)
+                break;
+            case "right":
+                beforeValue = this.alter(currentRow, currentColumn + 1, player, this.matrix)
+                this.alter(currentRow, currentColumn + 1, player, this.matrix)
+                this.alter(currentRow, currentColumn, ".", this.matrix)
+        }
+
+
+        if (beforeValue === "c"){
+            if (player === "1"){
+            this.updateScore("player1")
+            }
+            else {
+                this.updateScore("player2")
+            }
+        }
+
+        return this.matrix
+    }
+    updateScore(player){
+        this.scores[player] = this.scores[player] + 10
+
+    }
+}
+
+
+// const randomNumber = Math.floor(Math.random() * 10) + 1
+// const goldBoard = new GoldMatrix(5, 5)
+// goldBoard.movePlayer("2", "up")
+// goldBoard.movePlayer("1", "right")
+
+// goldBoard.print()

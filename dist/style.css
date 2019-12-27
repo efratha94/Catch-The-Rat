@@ -1,0 +1,44 @@
+#container-all{
+    display: grid;
+    grid-template-areas: 
+    "game game game game game"
+    "game game game game game"
+    "game game game game game"
+    "game game game game game"
+    "score score score score score";
+    width: 800px;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+#game-container{
+    display: grid;
+    grid-area: game;
+    background-color: #90A4AE;
+    grid-template-rows: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
+    border: thick ridge black;
+    
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    color: black;
+    font-size: 40px;
+}
+
+#score-container{
+    display: grid;
+    grid-area: score;
+    grid-template-columns: 3fr 3fr;
+}
+
+.player{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
