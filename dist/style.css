@@ -6,8 +6,8 @@
     "game game game game game"
     "game game game game game"
     "score score score score score";
-    width: 800px;
-    height: 600px;
+    width: 80vw;
+    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -45,3 +45,14 @@
     justify-items: center;
     align-items: center;
 }
+
+/* .leave{
+    display: none
+} */
+/* .spot-1{
+    background: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cat-face-by-jonathan-fife.jpg);
+     background-size: cover;
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+} */

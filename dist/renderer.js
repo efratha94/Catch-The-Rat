@@ -1,12 +1,13 @@
 class Renderer {
-    renderBoard(matrix){
-        // console.log(matrix)
+    renderBoard(matrix) {
+
         const source = $("#game-container-template").html()
         const template = Handlebars.compile(source)
-        const newHTML = template({matrix})
+        const newHTML = template({ matrix })
+        // console.log(newHTML)
         $("#game-container").append(newHTML)
     }
-    renderScores(scores){
+    renderScores(scores) {
         // console.log(scores)
         const source = $("#score-container-template").html()
         const template = Handlebars.compile(source)
