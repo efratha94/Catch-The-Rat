@@ -25,13 +25,11 @@ class Matrix {
             const randomRow = Math.floor(Math.random() * 5)
             const randomCol = Math.floor(Math.random() * 5)
             let coin = "c"
-            // console.log(_matrix)
             this.alter(randomRow, randomCol, coin, _matrix)
             
         }
         _matrix[0][0] = "1"
         _matrix[4][4] = "2"
-        // console.log(_matrix)
         return _matrix
 
     }
@@ -81,7 +79,6 @@ class Matrix {
                 valueCoordinates.x = this.matrix[i].indexOf(value)
             }
         }
-        // console.log(valueCoordinates)
         return valueCoordinates
     }
 }

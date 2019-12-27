@@ -13,17 +13,34 @@ const loadPage = function(){
 $(document).ready(loadPage())
 
 
-
 $(document).on("keypress", function (e) {
-    console.log(e)
     if (e.keyCode == 119) {
-        console.log("thds")
-        
-        goldBoard.movePlayer("2", "up")
-        $("#game-container").empty()
-        renderer.renderBoard(goldBoard.matrix)
-         
+        goldBoard.movePlayer("1", "up")
     }
-    
-
+    if (e.keyCode === 97){
+        goldBoard.movePlayer("1", "left")
+    }
+    if (e.keyCode === 115){
+        goldBoard.movePlayer("1", "down")
+    }
+    if (e.keyCode === 100){
+        goldBoard.movePlayer("1", "right")
+    }
+    if (e.keyCode === 105){
+        goldBoard.movePlayer("2", "up")
+    }
+    if (e.keyCode === 106){
+        goldBoard.movePlayer("2", "left")
+    }
+    if (e.keyCode === 107){
+        goldBoard.movePlayer("2", "down")
+    }
+    if (e.keyCode === 108){
+        goldBoard.movePlayer("2", "right")
+    }
+    $("#game-container").empty()
+    renderer.renderBoard(goldBoard.matrix)
+    $("#score-container").empty()
+    renderer.renderScores(goldBoard.scores)
 })
+
