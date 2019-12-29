@@ -163,4 +163,8 @@
     height: 50px;
     grid-area: right;
 }
-/* add keyboard arrows and explain what to use!! */
+
+.icon-rat{
+    height: 50px;
+    width: 50px
+}
