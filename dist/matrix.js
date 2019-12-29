@@ -5,7 +5,7 @@ class Matrix {
 
     generateMatrix(numRows, numColumns) {
         let goldBoard = []
-        let spot = "."
+        let spot = "dot"
 
         for (let r = 0; r < numRows; r++) {
             goldBoard.push([])

@@ -9,34 +9,37 @@
     width: 80vw;
     height: 100vh;
     box-sizing: border-box;
+    border: thick #FFD180 double;
+    border-radius: 10px;
 }
 
 #game-container{
     display: grid;
     grid-area: game;
-    background-color: #90A4AE;
+    background-color: hsla(0, 0%, 74%, 0.57);
     grid-template-rows: repeat(5, 1fr);
-    /* grid-template-columns: repeat(5, 1fr); */
-    border: thick ridge black;
     overflow: hidden;
-    
-}
-
-.row{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    align-items: center;
-    color: black;
-    font-size: 40px;
-    overflow: hidden;
-
+    border-bottom: groove 2px #FFD180;
+    border-radius: 5px;
 }
 
 #score-container{
     display: grid;
     grid-area: score;
     grid-template-columns: 3fr 3fr;
+    background-color: hsla(0, 69%, 67%, 0.63);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: stretch;
+    align-items: stretch;
+    color: black;
+    font-size: 40px;
+    overflow: hidden;
 }
 
 .player{
@@ -44,15 +47,63 @@
     grid-template-rows: 1fr 2fr;
     justify-items: center;
     align-items: center;
+    font-weight: bold;
 }
 
-/* .leave{
-    display: none
-} */
-/* .spot-1{
-    background: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/cat-face-by-jonathan-fife.jpg);
-     background-size: cover;
+@keyframes flip{
+    0%{
+        transform: rotateZ(-15deg) 
+    }
+    50%{
+        transform: rotateZ(15deg);
+        
+    }
+    100%{
+        transform: rotateZ(-15deg) 
+        
+        
+    }
+}
+.spot-1{
+    background-image: url("./cat-player-3.png");
+    background-color: inherit;
+    background-size: 90%;
     background-position: center;
-    background-size: 30%;
     background-repeat: no-repeat;
-} */
+    text-indent: -999px;
+    animation-name: flip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease 
+
+}
+.spot-2{
+    background-image: url("./cat-player-2.png");
+    background-color: inherit;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    animation-name: flip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease 
+}
+.spot-c{
+    background-image: url("./rat.png");
+    background-color: inherit;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    border: 1px dashed hsla(0, 0%, 62%, 0.6);
+}
+.spot-dot{
+    background-color: inherit;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    border: 1px dashed hsla(0, 0%, 62%, 0.6);
+}
+

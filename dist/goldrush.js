@@ -25,7 +25,7 @@ class GoldMatrix extends Matrix {
                         break;
                     default:
                         this.alter(currentRow - 1, currentColumn, player, this.matrix)
-                        this.alter(currentRow, currentColumn, ".", this.matrix)
+                        this.alter(currentRow, currentColumn, "dot", this.matrix)
                         
                 }
                 break;
@@ -40,7 +40,7 @@ class GoldMatrix extends Matrix {
                         break;
                     default:
                         this.alter(currentRow + 1, currentColumn, player, this.matrix)
-                        this.alter(currentRow, currentColumn, ".", this.matrix)
+                        this.alter(currentRow, currentColumn, "dot", this.matrix)
                         
                 }
                 break;
@@ -58,7 +58,7 @@ class GoldMatrix extends Matrix {
                         break;
                     default:
                         this.alter(currentRow, currentColumn - 1, player, this.matrix)
-                        this.alter(currentRow, currentColumn, ".", this.matrix)
+                        this.alter(currentRow, currentColumn, "dot", this.matrix)
                         
                 }
                 break;
@@ -76,7 +76,7 @@ class GoldMatrix extends Matrix {
                         break;
                     default:
                         this.alter(currentRow, currentColumn + 1, player, this.matrix)
-                        this.alter(currentRow, currentColumn, ".", this.matrix)
+                        this.alter(currentRow, currentColumn, "dot", this.matrix)
                         
                 }
                 break;

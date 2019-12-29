@@ -4,7 +4,6 @@ class Renderer {
         const source = $("#game-container-template").html()
         const template = Handlebars.compile(source)
         const newHTML = template({ matrix })
-        // console.log(newHTML)
         $("#game-container").append(newHTML)
     }
     renderScores(scores) {
