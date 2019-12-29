@@ -5,8 +5,11 @@
     "game game game game game"
     "game game game game game"
     "game game game game game"
+    "game game game game game"
+    "game game game game game"
+    "game game game game game"
     "score score score score score";
-    width: 70vw;
+    width: 60vw;
     height: 100vh;
     box-sizing: border-box;
     border: 3px #004445 solid;
@@ -21,6 +24,8 @@
     overflow: hidden;
     border-bottom: groove 2px #004445;
     border-radius: 1px;
+    align-self: stretch;
+    height: 105%
 }
 
 #score-container{
@@ -28,16 +33,15 @@
     grid-area: score;
     grid-template-columns: 3fr 3fr;
     /* background-color: hsla(0, 69%, 67%, 0.63); */
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
     border-radius: 1px;
     border-left: 0.5px inset #2c7873; 
     border-right: 0.5px inset #2c7873;
-    /* background: #42275a;   */
-    /* background: -webkit-linear-gradient(to bottom, #734b6d, #42275a);   */
-    /* background: linear-gradient(to bottom, #734b6d, #42275a);  */
     background-color: #2c7873;
-    
+    box-sizing: border-box;
+    height: 90%;
+    align-self: flex-end;
 }
 
 .row{
@@ -52,12 +56,14 @@
 
 .player{
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 10% 20%;
     justify-items: center;
-    align-items: center;
+    align-content: flex-end;
+    align-items: flex-end;
     font-weight: bold;
     border: 1px #2c7873 dashed; 
     color: #ffd800;
+    
 }
 
 @keyframes flip{
@@ -102,7 +108,7 @@
 .spot-c{
     background-image: url("./rat.png");
     background-color: inherit;
-    background-size: 50%;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -999px;
@@ -117,3 +123,44 @@
     border: 1px dashed #53ac7a;
 }
 
+.big-title{
+    font-family: 'Racing Sans One', cursive;
+    text-align: start;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    text-indent: 255px ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.keyboard{
+    display: grid;
+    grid-template-areas: 
+    ". up ."
+    "left down right";
+    align-self: flex-end;
+    margin: 0px;
+    padding: 0px;
+}
+
+.up{
+    width:50px;
+    height: 50px;
+    grid-area: up;
+}
+.left{
+    width:50px;
+    height: 50px;
+    grid-area: left;
+}
+.down{
+    width:50px;
+    height: 50px;
+    grid-area: down;
+}
+.right{
+    width:50px;
+    height: 50px;
+    grid-area: right;
+}
+/* add keyboard arrows and explain what to use!! */
