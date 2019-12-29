@@ -6,30 +6,38 @@
     "game game game game game"
     "game game game game game"
     "score score score score score";
-    width: 80vw;
+    width: 70vw;
     height: 100vh;
     box-sizing: border-box;
-    border: thick #FFD180 double;
+    border: 3px #004445 solid;
     border-radius: 10px;
 }
 
 #game-container{
     display: grid;
     grid-area: game;
-    background-color: hsla(0, 0%, 74%, 0.57);
+    background-color: #6fb98f;
     grid-template-rows: repeat(5, 1fr);
     overflow: hidden;
-    border-bottom: groove 2px #FFD180;
-    border-radius: 5px;
+    border-bottom: groove 2px #004445;
+    border-radius: 1px;
 }
 
 #score-container{
     display: grid;
     grid-area: score;
     grid-template-columns: 3fr 3fr;
-    background-color: hsla(0, 69%, 67%, 0.63);
+    /* background-color: hsla(0, 69%, 67%, 0.63); */
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
+    border-radius: 1px;
+    border-left: 0.5px inset #2c7873; 
+    border-right: 0.5px inset #2c7873;
+    /* background: #42275a;   */
+    /* background: -webkit-linear-gradient(to bottom, #734b6d, #42275a);   */
+    /* background: linear-gradient(to bottom, #734b6d, #42275a);  */
+    background-color: #2c7873;
+    
 }
 
 .row{
@@ -37,7 +45,7 @@
     grid-template-columns: repeat(5, 1fr);
     justify-items: stretch;
     align-items: stretch;
-    color: black;
+    /* color: black; */
     font-size: 40px;
     overflow: hidden;
 }
@@ -48,6 +56,8 @@
     justify-items: center;
     align-items: center;
     font-weight: bold;
+    border: 1px #2c7873 dashed; 
+    color: #ffd800;
 }
 
 @keyframes flip{
@@ -67,7 +77,7 @@
 .spot-1{
     background-image: url("./cat-player-3.png");
     background-color: inherit;
-    background-size: 90%;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -999px;
@@ -80,7 +90,7 @@
 .spot-2{
     background-image: url("./cat-player-2.png");
     background-color: inherit;
-    background-size: 80%;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -999px;
@@ -92,11 +102,11 @@
 .spot-c{
     background-image: url("./rat.png");
     background-color: inherit;
-    background-size: 70%;
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -999px;
-    border: 1px dashed hsla(0, 0%, 62%, 0.6);
+    border: 1px dashed #53ac7a;
 }
 .spot-dot{
     background-color: inherit;
@@ -104,6 +114,6 @@
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -999px;
-    border: 1px dashed hsla(0, 0%, 62%, 0.6);
+    border: 1px dashed #53ac7a;
 }
 
