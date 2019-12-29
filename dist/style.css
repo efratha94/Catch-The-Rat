@@ -32,7 +32,6 @@
     display: grid;
     grid-area: score;
     grid-template-columns: 3fr 3fr;
-    /* background-color: hsla(0, 69%, 67%, 0.63); */
     font-family: 'Caveat', cursive;
     font-size: 24px;
     border-radius: 1px;
@@ -81,7 +80,7 @@
     }
 }
 .spot-1{
-    background-image: url("./cat-player-3.png");
+    background-image: url("./images/cat-player-3.png");
     background-color: inherit;
     background-size: 60%;
     background-position: center;
@@ -94,7 +93,7 @@
 
 }
 .spot-2{
-    background-image: url("./cat-player-2.png");
+    background-image: url("./images/cat-player-2.png");
     background-color: inherit;
     background-size: 60%;
     background-position: center;
@@ -106,7 +105,7 @@
     animation-timing-function: ease 
 }
 .spot-c{
-    background-image: url("./rat.png");
+    background-image: url("./images/rat.png");
     background-color: inherit;
     background-size: 60%;
     background-position: center;

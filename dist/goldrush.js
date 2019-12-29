@@ -1,4 +1,3 @@
-// const Matrix = require("./matrix")
 
 class GoldMatrix extends Matrix {
     constructor(numRows, numColumns) {
@@ -99,10 +98,3 @@ class GoldMatrix extends Matrix {
     }
 }
 
-
-// const randomNumber = Math.floor(Math.random() * 10) + 1
-// const goldBoard = new GoldMatrix(5, 5)
-// goldBoard.movePlayer("2", "up")
-// goldBoard.movePlayer("1", "right")
-
-// goldBoard.print()
