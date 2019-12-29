@@ -19,7 +19,7 @@ class Matrix {
 
 
     generateCoins(_matrix) {
-        const randomNumber = Math.floor(Math.random() * 10) + 1
+        const randomNumber = Math.floor(Math.random() * 12) + 1
         for (let coin = 1; coin < randomNumber; coin++) {
 
             const randomRow = Math.floor(Math.random() * 5)
